@@ -1,250 +1,93 @@
-/**
-** CHANGING DEFAULT STYLES OF BROWSER
-**/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 body {
-  font-family: sans-serif;
-  color: rgb(77, 5, 75);
-  /* color: rgb(23, 62, 107); */
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 25% auto 25%;
 }
 
-/**
-** STYLE RULES FOR CONTENT SECTION
-**/
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-image: radial-gradient(
-    circle farthest-corner at 32.7% 82.7%,
-    rgba(173, 0, 171, 1) 8.3%,
-    rgba(15, 51, 92, 1) 79.4%
-  );
-  width: 55%;
-  min-height: 100vh;
-  padding: 1rem 0.5rem;
+main {
+  grid-column: 2;
+  padding: 20px;
 }
 
-.image {
-  background-image: url("./img/cat.svg");
-  height: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.text {
+header,
+footer {
   color: #fff;
-  text-align: center;
+  grid-column: 1 / -1;
+  background: rgb(123, 52, 255);
+  padding: 20px;
 }
 
-/**
-** STYLE RULES FOR FORM SECTION
-**/
-
-form {
-  flex-direction: column;
-  justify-content: center;
+header {
   display: flex;
-  width: 45%;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-}
-
-form div {
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.title {
-  margin-bottom: 3rem;
-}
-
-form div input {
-  width: 100%;
-  border-radius: 8px;
-  height: 40px;
-  outline: none;
-  border: 2px solid rgb(219, 152, 218);
-  padding: 0 2.5rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-::placeholder {
-  color: rgb(231, 177, 231);
-}
-
-/**
-** STYLE RULES FOR SOCIAL MEDIA
-**/
-.btn {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.btn-1,
-.btn-2 {
-  padding: 0.8rem 0.2rem;
-  width: 100%;
-  display: flex;
-  gap: 1rem;
+  align-items: center;
   justify-content: center;
   align-items: center;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  background-image: radial-gradient(
-    circle farthest-corner at 32.7% 82.7%,
-    rgba(173, 0, 171, 1) 8.3%,
-    rgba(15, 51, 92, 1) 79.4%
-  );
-  color: #ffecf7;
-  cursor: pointer;
-  margin-bottom: 1rem;
 }
 
-.btn-1:hover {
-  background-image: none;
-  background-color: rgb(219, 152, 218);
-}
-
-.btn-2:hover {
-  background-image: none;
-  background-color: rgb(219, 152, 218);
-}
-
-.create-account {
-  text-align: center;
-}
-
-span {
-  color: rgb(235, 36, 231);
-  cursor: pointer;
-}
-
-.question {
-  font-size: 0.89rem;
-}
-
-/**
-** STYLE RULES FOR ICONS
-**/
-
-form div i {
-  position: absolute;
-  padding: 0.8rem;
-}
-
-input:focus {
-  border: 2px solid rgb(100, 73, 100);
-}
-
-.fa-user-circle,
-.fa-at,
-.fa-lock {
-  color: rgb(219, 152, 218);
-}
-
-.failure-icon,
-.success-icon {
-  right: 0;
-  opacity: 0;
-}
-
-.failure-icon,
-.error {
-  color: rgba(173, 0, 171, 1);
-}
-
-.success-icon {
-  color: rgba(15, 51, 92, 1);
-}
-
-.error {
+form {
   font-size: 0.8rem;
-  margin-top: 0.4rem;
-  margin-left: 2.65rem;
+  margin-left: 5rem;
 }
 
-/**
-** STYLE RULES FOR BUTTON
-**/
+form label {
+  margin-right: 0.5rem;
+}
+
+form input {
+  padding: 0.25rem;
+  border-radius: 3px;
+  border: none;
+}
+
+form input:focus {
+  color: rgb(123, 52, 255);
+  outline-color: rgb(123, 52, 255);
+}
 
 button {
-  margin-top: 0.8rem;
-  width: 100%;
-  height: 45px;
-  /**
-  background-image: radial-gradient(
-    circle farthest-corner at -4.5% 34.3%,
-    rgba(13, 20, 174, 1) 0%,
-    rgba(243, 165, 140, 1) 90%
-  );
-  **/
-  background-image: radial-gradient(
-    circle farthest-corner at 32.7% 82.7%,
-    rgba(173, 0, 171, 1) 8.3%,
-    rgba(15, 51, 92, 1) 79.4%
-  );
-  border: none;
-  border-radius: 8px;
-  color: #ffecf7;
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
-  /*text-transform: uppercase;*/
-  cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background-color: rgb(123, 52, 255);
+  border: 1px solid #fff;
+  padding: 0.25rem;
+  margin-left: 1rem;
+  border-radius: 3px;
 }
 
 button:hover {
-  background-image: none;
-  background-color: rgb(219, 152, 218);
-}
-/**
-** MEDIA QUERIES
-**/
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-  }
-
-  form,
-  .content {
-    width: 100%;
-  }
-
-  .btn {
-    flex-direction: column;
-  }
-
-  .image {
-    height: 70vh;
-  }
+  color: rgb(123, 52, 255);
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 
-@media (max-width: 425px) {
-  form {
-    padding: 1rem;
-  }
+main {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .image {
-    display: none;
-  }
+.personal-greeting {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: rgb(145, 108, 214);
+}
+
+img {
+  border-radius: 4px;
+}
+
+footer p {
+  text-align: center;
 }
