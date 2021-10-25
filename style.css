@@ -1,0 +1,250 @@
+/**
+** CHANGING DEFAULT STYLES OF BROWSER
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(77, 5, 75);
+  /* color: rgb(23, 62, 107); */
+}
+
+.container {
+  display: flex;
+}
+
+/**
+** STYLE RULES FOR CONTENT SECTION
+**/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: radial-gradient(
+    circle farthest-corner at 32.7% 82.7%,
+    rgba(173, 0, 171, 1) 8.3%,
+    rgba(15, 51, 92, 1) 79.4%
+  );
+  width: 55%;
+  min-height: 100vh;
+  padding: 1rem 0.5rem;
+}
+
+.image {
+  background-image: url("./img/cat.svg");
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+}
+
+/**
+** STYLE RULES FOR FORM SECTION
+**/
+
+form {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  width: 45%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+form div {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.title {
+  margin-bottom: 3rem;
+}
+
+form div input {
+  width: 100%;
+  border-radius: 8px;
+  height: 40px;
+  outline: none;
+  border: 2px solid rgb(219, 152, 218);
+  padding: 0 2.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+::placeholder {
+  color: rgb(231, 177, 231);
+}
+
+/**
+** STYLE RULES FOR SOCIAL MEDIA
+**/
+.btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.btn-1,
+.btn-2 {
+  padding: 0.8rem 0.2rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background-image: radial-gradient(
+    circle farthest-corner at 32.7% 82.7%,
+    rgba(173, 0, 171, 1) 8.3%,
+    rgba(15, 51, 92, 1) 79.4%
+  );
+  color: #ffecf7;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.btn-1:hover {
+  background-image: none;
+  background-color: rgb(219, 152, 218);
+}
+
+.btn-2:hover {
+  background-image: none;
+  background-color: rgb(219, 152, 218);
+}
+
+.create-account {
+  text-align: center;
+}
+
+span {
+  color: rgb(235, 36, 231);
+  cursor: pointer;
+}
+
+.question {
+  font-size: 0.89rem;
+}
+
+/**
+** STYLE RULES FOR ICONS
+**/
+
+form div i {
+  position: absolute;
+  padding: 0.8rem;
+}
+
+input:focus {
+  border: 2px solid rgb(100, 73, 100);
+}
+
+.fa-user-circle,
+.fa-at,
+.fa-lock {
+  color: rgb(219, 152, 218);
+}
+
+.failure-icon,
+.success-icon {
+  right: 0;
+  opacity: 0;
+}
+
+.failure-icon,
+.error {
+  color: rgba(173, 0, 171, 1);
+}
+
+.success-icon {
+  color: rgba(15, 51, 92, 1);
+}
+
+.error {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  margin-left: 2.65rem;
+}
+
+/**
+** STYLE RULES FOR BUTTON
+**/
+
+button {
+  margin-top: 0.8rem;
+  width: 100%;
+  height: 45px;
+  /**
+  background-image: radial-gradient(
+    circle farthest-corner at -4.5% 34.3%,
+    rgba(13, 20, 174, 1) 0%,
+    rgba(243, 165, 140, 1) 90%
+  );
+  **/
+  background-image: radial-gradient(
+    circle farthest-corner at 32.7% 82.7%,
+    rgba(173, 0, 171, 1) 8.3%,
+    rgba(15, 51, 92, 1) 79.4%
+  );
+  border: none;
+  border-radius: 8px;
+  color: #ffecf7;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  /*text-transform: uppercase;*/
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-image: none;
+  background-color: rgb(219, 152, 218);
+}
+/**
+** MEDIA QUERIES
+**/
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  form,
+  .content {
+    width: 100%;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+
+  .image {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 425px) {
+  form {
+    padding: 1rem;
+  }
+
+  .image {
+    display: none;
+  }
+}

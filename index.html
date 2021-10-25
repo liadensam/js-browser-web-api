@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser - web API</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="image"></div>
+        <div class="text"><h1>Be Your Own Guide In Your Journey.</h1></div>
+      </div>
+      <form id="form">
+        <div class="social-media">
+          <div class="title">
+            <h1>Get Started</h1>
+          </div>
+          <div class="question">
+            <p>
+              Already Have An Account?<br />
+              <span>Log In</span>
+            </p>
+          </div>
+          <div>
+            <p class="create-account">Sign Up With</p>
+          </div>
+          <div class="btn">
+            <div class="btn-1">
+              <!-- <img
+                src="https://img.icons8.com/offices/24/000000/google-logo.png"
+              /> -->
+
+              <img
+                src="https://img.icons8.com/glyph-neue/24/ffffff/google-logo.png"
+              />
+              Google
+            </div>
+            <div class="btn-2">
+              <!-- <img src="https://img.icons8.com/nolan/30/facebook-new.png" /> -->
+              <img
+                src="https://img.icons8.com/material-rounded/24/ffffff/facebook-new.png"
+              />
+              Facebook
+            </div>
+          </div>
+          <div class="create-account"><p>Or Create An Account</p></div>
+        </div>
+
+        <!-- /**
+          * ! user name input 
+        **/ -->
+        <div>
+          <label for="username">User Name</label>
+          <i class="fas fa-user-circle"></i>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Name Surname"
+          />
+          <i class="fas fa-times-circle failure-icon"></i>
+          <i class="fas fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+        <!-- /**
+          * ! email input 
+        **/ -->
+        <div>
+          <label for="email">Email</label>
+          <i class="fas fa-at"></i>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@email.com"
+          />
+          <i class="fas fa-times-circle failure-icon"></i>
+          <i class="fas fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+        <!-- /**
+          * ! password input 
+        **/ -->
+        <div>
+          <label for="password">Password</label>
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <i class="fas fa-times-circle failure-icon"></i>
+          <i class="fas fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+
+        <button
+          type="submit"
+          id="submit"
+          onclick="localStorage.removeItem('form');
+          form.value=''"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
