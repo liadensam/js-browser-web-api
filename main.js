@@ -10,7 +10,7 @@ let username = id("username"),
     successIcon = classes("success-icon"),
     failureIcon = classes("failure-icon");
 
-//prevents the input text user wrote in the input fields stays if the user accidentally leaves the page - autosave
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -19,6 +19,7 @@ form.addEventListener("submit", (e) => {
     engine(password, 2, "Fill this field.");
 });
 
+//prevents the input text user wrote in the input fields stays if the user accidentally leaves the page - autosave
 form.value = localStorage.getItem('form');
     form.oninput = () => {
     localStorage.setItem('form', form.value)
