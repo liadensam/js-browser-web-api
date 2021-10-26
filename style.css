@@ -88,6 +88,26 @@ img {
   border-radius: 4px;
 }
 
+.hide {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide p {
+  color: rgb(123, 52, 255);
+  font-size: 0.7rem;
+}
+
+.hide button {
+  margin-left: 0.2rem;
+}
+
+#showBtn {
+  opacity: 0;
+}
+
 footer p {
   text-align: center;
 }
